@@ -1,0 +1,26 @@
+# Normalize all text files in Git
+* text=auto
+
+# Keep source/config files consistently LF
+*.py      text eol=lf
+*.sh      text eol=lf
+*.sbatch  text eol=lf
+*.md      text eol=lf
+*.txt     text eol=lf
+*.json    text eol=lf
+*.yaml    text eol=lf
+*.yml     text eol=lf
+
+# Windows-specific scripts should use CRLF
+*.bat     text eol=crlf
+*.cmd     text eol=crlf
+
+# Binary files: never modify line endings
+*.png     binary
+*.jpg     binary
+*.jpeg    binary
+*.gif     binary
+*.pdf     binary
+*.zip     binary
+*.pt      binary
+*.pth     binary
