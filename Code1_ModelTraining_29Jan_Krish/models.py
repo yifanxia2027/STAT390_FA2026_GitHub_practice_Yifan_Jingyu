@@ -53,7 +53,7 @@ class HierarchicalAttnMIL(nn.Module):
     2. Stain-level: across slices within each stain  
     3. Case-level: across different stains
     """
-    def __init__(self, base_model=None, num_classes: int = 2, embed_dim: int = 512, dropout: float = 0.3):
+    def __init__(self, base_model=None, num_classes: int = 2, embed_dim: int = 512, dropout: float = 0.2):
         super().__init__()
         
         if base_model is None:
@@ -73,7 +73,7 @@ class HierarchicalAttnMIL(nn.Module):
         self.patch_projector = nn.Sequential(
             nn.Linear(base_model.classifier.in_features * 4, embed_dim),
             nn.ReLU(),
-            nn.Dropout(dropout)
+            #nn.Dropout(dropout)
         )
         
         # Three levels of attention with dropout

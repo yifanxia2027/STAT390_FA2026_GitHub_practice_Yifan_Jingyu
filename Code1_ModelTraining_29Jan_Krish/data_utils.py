@@ -150,6 +150,10 @@ def split_by_case_stratified(slices_by_class: Dict, random_state: int = 42) -> T
             else:
                 print(f'Critical error! Case {case_id} not in any split')
     
+    print(len(train_slices))
+    print(len(val_slices))
+    print(len(test_slices))
+
     return train_slices, val_slices, test_slices
 
 
